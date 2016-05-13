@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
     @lists = List.recently_published
     @email_signup ||= EmailSignup.new
     @collections = Collection.all
+    @items = Item.all
   end
 
   def search
