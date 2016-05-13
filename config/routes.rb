@@ -5,6 +5,8 @@ Sylaby::Application.routes.draw do
 
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  match 'callback', to: 'items#create', via: :post
 
   devise_for :users
   resources :recommendations
